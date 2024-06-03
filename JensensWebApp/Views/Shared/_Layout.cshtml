@@ -33,15 +33,19 @@
             @using (Html.BeginForm("Index", "Home", FormMethod.Get, new { id = "topicForm" }))
             {
                 <ul class="topic-list">
-                    @{
+                    @if (ViewBag.TopicDisplayNames != null)
+                    {
                         var topicDisplayNames = ViewBag.TopicDisplayNames as Dictionary<string, string>;
-                        foreach (var topic in topicDisplayNames)
+                        if (topicDisplayNames != null)
                         {
-                            <li class="topic-item">
-                                <a href="#" onclick="document.getElementById('topic').value='@topic.Key'; document.getElementById('topicForm').submit(); return false;">
-                                    @topic.Value
-                                </a>
-                            </li>
+                            foreach (var topic in topicDisplayNames)
+                            {
+                                <li class="topic-item">
+                                    <a href="#" onclick="document.getElementById('topic').value='@topic.Key'; document.getElementById('topicForm').submit(); return false;">
+                                        @topic.Value
+                                    </a>
+                                </li>
+                            }
                         }
                     }
                 </ul>
