@@ -1,12 +1,12 @@
-html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
+html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+body {
   background-image: url('background.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -16,13 +16,16 @@ body {
 }
 
 .body-container {
-  margin-top: 40px;
-  padding-top: 50px;
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
+  /* Adding padding here to push down the card container */
 }
 
 h1 {
   color: #1a1a1a;
   font-weight: bold;
+  margin: 0;
 }
 
 label {
@@ -57,6 +60,19 @@ button.btn-primary:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+  max-width: calc(100% - 220px);
+  /* Adjusted to ensure space for the footer */
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 60px;
+  /* Adjust this value if needed to move the card container down */
+  z-index: 1;
+  /* Ensure it appears above the header */
+  padding-left: 110px;
+  /* Half of the footer width for left padding */
+  padding-right: 110px;
+  /* Half of the footer width for right padding */
 }
 
 .card {
@@ -120,6 +136,19 @@ button.btn-primary:hover {
   text-decoration: none;
 }
 
+footer {
+  background-color: transparent;
+  color: #000000 !important;
+  padding: 10px !important;
+  position: fixed !important;
+  bottom: 0 !important;
+  right: 0 !important;
+  width: 200px !important;
+  max-width: 200px !important;
+  border-top-left-radius: 10px;
+  z-index: 1000 !important;
+}
+
 @media (max-width: 768px) {
   .container {
     margin-top: 150px;
@@ -128,5 +157,14 @@ button.btn-primary:hover {
   .card {
     flex: 1 1 100%;
     min-height: auto;
+  }
+
+  .card-container {
+    padding-left: 20px;
+    /* Adjust for smaller screens */
+    padding-right: 20px;
+    /* Adjust for smaller screens */
+    max-width: calc(100% - 40px);
+    /* Adjust for smaller screens */
   }
 }
