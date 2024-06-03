@@ -15,8 +15,9 @@ body {
   color: #f2f2f2;
 }
 
-.container {
+.body-container {
   margin-top: 40px;
+  padding-top: 50px;
 }
 
 h1 {
@@ -117,19 +118,6 @@ button.btn-primary:hover {
 .card-link:hover {
   color: #d35400;
   text-decoration: none;
-}
-
-footer {
-  background-color: transparent;
-  color: #000000 !important;
-  padding: 10px !important;
-  position: fixed !important;
-  bottom: 0 !important;
-  right: 0 !important;
-  max-width: 200px !important;
-  border-top-left-radius: 10px;
-  z-index: 1000;
-  /* Ensure it stays on top of other content */
 }
 
 @media (max-width: 768px) {
