@@ -20,7 +20,7 @@
     justify-content: center;
     position: relative;
     width: 100%;
-    padding-top: 40px; /* Adjusted for less space above the title */
+    padding-top: 40px; 
   }
   
   .navbar-brand-wrapper {
@@ -121,13 +121,6 @@
     text-decoration: underline;
   }
   
-  /* .body-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-    padding-top: 50px; 
-  } */
-  
   footer {
     background-color: transparent;
     color: #000000 !important;
@@ -137,6 +130,6 @@
     right: 0 !important;
     max-width: 200px !important;
     border-top-left-radius: 10px;
-    z-index: 1000;
+    z-index: 1000 !important;
     /* Ensure it stays on top of other content */
   }

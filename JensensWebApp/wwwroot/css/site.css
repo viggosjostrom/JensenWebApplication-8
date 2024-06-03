@@ -19,40 +19,6 @@ body {
   margin: 0;
   padding: 0;
   padding-top: 60px;
-  /* Adding padding here to push down the card container */
-}
-
-h1 {
-  color: #1a1a1a;
-  font-weight: bold;
-  margin: 0;
-}
-
-label {
-  color: #1a1a1a;
-  font-weight: bold;
-}
-
-select.form-select {
-  background-color: #f2f2f2;
-  color: #1a1a1a;
-  border: 1px solid #1a1a1a;
-  padding: 5px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-
-button.btn-primary {
-  background-color: #333;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button.btn-primary:hover {
-  background-color: #555;
 }
 
 .card-container {
@@ -134,19 +100,6 @@ button.btn-primary:hover {
 .card-link:hover {
   color: #d35400;
   text-decoration: none;
-}
-
-footer {
-  background-color: transparent;
-  color: #000000 !important;
-  padding: 10px !important;
-  position: fixed !important;
-  bottom: 0 !important;
-  right: 0 !important;
-  width: 200px !important;
-  max-width: 200px !important;
-  border-top-left-radius: 10px;
-  z-index: 1000 !important;
 }
 
 @media (max-width: 768px) {
