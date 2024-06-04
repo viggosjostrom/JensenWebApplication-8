@@ -16,14 +16,15 @@ h1 {
     font-family: "Cursive", "Lucida Handwriting";
     text-align: center;
     animation: pulse 2s infinite ease-in-out;
+    padding-top: 70px;
 }
 
 :root {
-    --color-1: #186cb8;
-    --color-2: #2a9a9f;
+    --color-1: #f1b211;
+    --color-2: #e83611;
     --color-3: #f98d00;
-    --color-4: #e83611;
-    --color-5: #f1b211;
+    --color-4: #2a9a9f;
+    --color-5: #186cb8;
 }
 
 * {
@@ -36,11 +37,14 @@ body {
     font-family: Arial, sans-serif;
 }
 
+
 .container {
     line-height: 1;
     display: inline;
     min-height: calc(100vh - 16px);
 }
+
+
 
 p {
     color: transparent;
@@ -70,7 +74,7 @@ p {
 
 @media screen and (min-width: 768px) {
     p {
-        font-size: 3vw; /* Ändrar textstorleken på större skärmar */
+        font-size: 3vw; 
     }
 }
 
@@ -101,6 +105,7 @@ p {
 
 .SubBox label {
     margin-bottom: 5px;
+    color:black;
 }
 
 .SubBox input, .SubBox textarea {
@@ -116,7 +121,8 @@ p {
     margin: 0 auto;
     display: block;
     width: calc(100% - 20px);
-    resize: vertical; /* Gör det möjligt att ändra höjd */
+    resize: vertical; 
+    margin-bottom: 10px;
 }
 
 .SubBox button {
@@ -129,6 +135,7 @@ p {
     display: block;
     margin-left: auto;
     margin-right: 0;
+    
 }
 
 .SubBox button:hover {
