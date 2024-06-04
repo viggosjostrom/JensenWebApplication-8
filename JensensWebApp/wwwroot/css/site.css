@@ -1,12 +1,12 @@
-html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
+html,
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+
+body {
   background-image: url('background.jpg');
   background-size: cover;
   background-attachment: fixed;
@@ -15,40 +15,10 @@ body {
   color: #f2f2f2;
 }
 
-.container {
-  margin-top: 40px;
-}
-
-h1 {
-  color: #1a1a1a;
-  font-weight: bold;
-}
-
-label {
-  color: #1a1a1a;
-  font-weight: bold;
-}
-
-select.form-select {
-  background-color: #f2f2f2;
-  color: #1a1a1a;
-  border: 1px solid #1a1a1a;
-  padding: 5px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-}
-
-button.btn-primary {
-  background-color: #333;
-  border: none;
-  color: #fff;
-  padding: 10px 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-button.btn-primary:hover {
-  background-color: #555;
+.body-container {
+  margin: 0;
+  padding: 0;
+  padding-top: 60px;
 }
 
 .card-container {
@@ -56,6 +26,19 @@ button.btn-primary:hover {
   flex-wrap: wrap;
   gap: 20px;
   justify-content: space-between;
+  max-width: calc(100% - 220px);
+  /* Adjusted to ensure space for the footer */
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  top: 60px;
+  /* Adjust this value if needed to move the card container down */
+  z-index: 1;
+  /* Ensure it appears above the header */
+  padding-left: 110px;
+  /* Half of the footer width for left padding */
+  padding-right: 110px;
+  /* Half of the footer width for right padding */
 }
 
 .card {
@@ -119,19 +102,6 @@ button.btn-primary:hover {
   text-decoration: none;
 }
 
-footer {
-  background-color: transparent;
-  color: #000000 !important;
-  padding: 10px !important;
-  position: fixed !important;
-  bottom: 0 !important;
-  right: 0 !important;
-  max-width: 200px !important;
-  border-top-left-radius: 10px;
-  z-index: 1000;
-  /* Ensure it stays on top of other content */
-}
-
 @media (max-width: 768px) {
   .container {
     margin-top: 150px;
@@ -140,5 +110,14 @@ footer {
   .card {
     flex: 1 1 100%;
     min-height: auto;
+  }
+
+  .card-container {
+    padding-left: 20px;
+    /* Adjust for smaller screens */
+    padding-right: 20px;
+    /* Adjust for smaller screens */
+    max-width: calc(100% - 40px);
+    /* Adjust for smaller screens */
   }
 }
