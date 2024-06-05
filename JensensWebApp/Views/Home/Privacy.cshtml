@@ -1,6 +1,19 @@
-﻿@{
-    ViewData["Title"] = "Privacy Policy";
-}
-<h1>@ViewData["Title"]</h1>
+﻿<div class="bodyclass">
+<body>
+    <div class="formclass">
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
 
-<p>Use this page to detail your site's privacy policy.</p>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" required></textarea>
+        
+        <br><br>
+        <input type="submit" value="Submit">
+    </form>
+    </div>  
+</body>
+</div>
