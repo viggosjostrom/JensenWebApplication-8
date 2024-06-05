@@ -191,7 +191,7 @@ namespace JensensWebApp.Controllers
             return View(articles);
         }
 
-        public IActionResult Privacy()
+        public IActionResult Contact()
         {
             return View();
         }
