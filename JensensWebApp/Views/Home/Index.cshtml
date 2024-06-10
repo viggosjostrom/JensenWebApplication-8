@@ -15,14 +15,13 @@
     {"Idrott", "Idrott"}
 };
     ViewBag.TopicDisplayNames = topicDisplayNames;
-
 }
 
 <div class="body-container">
-    <div class="row mt-4">
+    <div id="news-container" class="row mt-4">
         @foreach (var article in Model)
         {
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 news-article">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">@article.Title</h5>
@@ -34,4 +33,9 @@
             </div>
         }
     </div>
+    <button id="load-more" class="btn btn-primary">Ladda fler nyheter</button>
 </div>
+
+@section Scripts {
+    <script src="~/js/news-loader.js"></script>
+}
