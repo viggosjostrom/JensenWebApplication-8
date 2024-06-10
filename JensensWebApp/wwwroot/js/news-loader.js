@@ -19,7 +19,7 @@ function loadMoreNews() {
                             <h5 class="card-title">${article.title}</h5>
                             <p class="card-text">${article.summary}</p>
                             <a href="${article.link}" class="card-link" target="_blank">Read More</a>
-                            <p class="card-text"><small class="text-muted">${new Date(article.published).toLocaleString()}</small></p>
+                            <p class="card-text"><small class="text-muted">${new Date(article.published).toISOString().slice(0, 19).replace('T', ' ')}</small></p>
                         </div>
                     </div>`;
                 newsContainer.appendChild(articleElement);
