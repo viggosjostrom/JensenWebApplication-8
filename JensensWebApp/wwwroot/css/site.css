@@ -133,6 +133,13 @@ body.dark-mode .card {
   color: #f2f2f2;
 }
 
+/* Justera knappen */
+#dark-mode-button {
+  margin-left: auto;
+  /* Skjuter knappen till höger */
+  margin-right: 20px;
+}
+
 @media (max-width: 768px) {
   .container {
     margin-top: 150px;
