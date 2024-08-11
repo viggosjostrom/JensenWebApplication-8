@@ -101,6 +101,37 @@ body {
   color: #d35400;
   text-decoration: none;
 }
+/* Grundläggande mörkt läge-stil */
+body.dark-mode {
+  background-color: #000000;
+  /* Ändra till svart bakgrund i mörkt läge */
+  background-image: none;
+  /* Ta bort bakgrundsbilden i mörkt läge */
+  color: #ffffff;
+}
+
+/* Mörkt läge för navbaren */
+body.dark-mode .navbar {
+  background-color: #1e1e1e;
+}
+
+/* Mörkt läge för footer */
+body.dark-mode .footer {
+  background-color: #1e1e1e;
+  color: #ffffff;
+}
+
+/* Mörkt läge för nyhetskort (om du har några) */
+body.dark-mode .news-card {
+  background-color: #1e1e1e;
+  border-color: #333333;
+}
+
+/* Mörkt läge för kort */
+body.dark-mode .card {
+  background-color: #1e1e1e;
+  color: #f2f2f2;
+}
 
 @media (max-width: 768px) {
   .container {
@@ -120,4 +151,5 @@ body {
     max-width: calc(100% - 40px);
     /* Adjust for smaller screens */
   }
+  
 }
