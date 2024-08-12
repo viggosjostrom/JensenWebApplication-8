@@ -2,7 +2,7 @@
 
 @{
     ViewBag.Title = "Articles";
-
+    var initialLoadCount = 6;
     Dictionary<string, string> topicDisplayNames = new Dictionary<string, string>
 {
     {"Halsa", "Hälsa"},
@@ -19,10 +19,13 @@
 }
 
 <div class="body-container">
-    <div class="row mt-4">
-        @foreach (var article in Model)
+    <div class="row mt-4" id="articles-container">
+        @for (int i = 0; i < Model.Count; i++)
         {
-            <div class="col-md-6 col-lg-4 mb-4">
+            var article = Model[i];
+            string cssClass = i >= initialLoadCount ? "hidden-article" : "";  // Hide articles after the initial count
+
+            <div class="col-md-6 col-lg-4 mb-4 article-item @cssClass">
                 <div class="card">
                     <div class="card-body">
                         <h5 class="card-title">@article.Title</h5>
@@ -34,4 +37,31 @@
             </div>
         }
     </div>
+    @if (Model.Count > initialLoadCount)
+    {
+        <button id="load-more-button" class="btn btn-primary mt-4" data-visible-count="@initialLoadCount">
+            Load More
+        </button>
+    }
 </div>
+
+<script>
+    document.getElementById('load-more-button').addEventListener('click', function () {
+        const loadMoreButton = this;
+        let visibleCount = parseInt(loadMoreButton.getAttribute('data-visible-count'));
+        const articlesToLoad = 3;  // Number of articles to reveal on each click
+        const hiddenArticles = document.querySelectorAll('.hidden-article');
+
+        for (let i = 0; i < articlesToLoad && i < hiddenArticles.length; i++) {
+            hiddenArticles[i].classList.remove('hidden-article');
+        }
+
+        visibleCount += articlesToLoad;
+        loadMoreButton.setAttribute('data-visible-count', visibleCount);
+
+        if (hiddenArticles.length <= articlesToLoad) {
+            loadMoreButton.style.display = 'none';  // Hide the button when all articles are visible
+        }
+    });
+</script>
+
