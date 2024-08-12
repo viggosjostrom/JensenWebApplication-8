@@ -160,3 +160,6 @@ body.dark-mode .card {
   }
   
 }
+.hidden-article {
+  display: none;
+}
