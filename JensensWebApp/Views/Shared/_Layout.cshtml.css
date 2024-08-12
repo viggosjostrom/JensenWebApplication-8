@@ -122,14 +122,8 @@
   }
   
   footer {
-    background-color: transparent;
-    color: #000000 !important;
+    background-color: rgb(30, 30, 30);
+    color: #f5f4f4 !important;
     padding: 10px !important;
-    position: fixed !important;
     bottom: 0 !important;
-    right: 0 !important;
-    max-width: 200px !important;
-    border-top-left-radius: 10px;
-    z-index: 1000 !important;
-    /* Ensure it stays on top of other content */
   }
