@@ -1,5 +1,6 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,6 +10,7 @@
     <link rel="stylesheet" href="~/JensensWebApp.styles.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
 </head>
+
 <body>
     <header class="site-header">
         <nav class="navbar">
@@ -28,6 +30,7 @@
                         </ul>
                     </div>
                 </div>
+                <button id="dark-mode-button" class="btn btn-secondary">Dark Mode</button>
             </div>
         </nav>
 
@@ -43,7 +46,8 @@
                             foreach (var topic in topicDisplayNames)
                             {
                                 <li class="topic-item">
-                                    <a href="#" onclick="document.getElementById('topic').value='@topic.Key'; document.getElementById('topicForm').submit(); return false;">
+                                    <a href="#"
+                                        onclick="document.getElementById('topic').value='@topic.Key'; document.getElementById('topicForm').submit(); return false;">
                                         @topic.Value
                                     </a>
                                 </li>
@@ -55,7 +59,7 @@
             }
         </div>
     </header>
-    
+
     <div class="body-container">
         <main role="main" class="pb-3">
             @RenderBody()
@@ -72,4 +76,5 @@
     <script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
