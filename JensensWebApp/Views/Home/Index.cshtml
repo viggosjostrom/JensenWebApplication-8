@@ -23,7 +23,7 @@
         @for (int i = 0; i < Model.Count; i++)
         {
             var article = Model[i];
-            string cssClass = i >= initialLoadCount ? "hidden-article" : "";  // Hide articles after the initial count
+            string cssClass = i >= initialLoadCount ? "hidden-article" : ""; 
 
             <div class="col-md-6 col-lg-4 mb-4 article-item @cssClass">
                 <div class="card">
@@ -39,9 +39,11 @@
     </div>
     @if (Model.Count > initialLoadCount)
     {
-        <button id="load-more-button" class="btn btn-primary mt-4" data-visible-count="@initialLoadCount">
-            Load More
-        </button>
+        <div class="load-more-container">
+            <button id="load-more-button" class="btn btn-primary load-more mt-4" data-visible-count="6">
+                Load More
+            </button>
+        </div>
     }
 </div>
 
@@ -49,7 +51,7 @@
     document.getElementById('load-more-button').addEventListener('click', function () {
         const loadMoreButton = this;
         let visibleCount = parseInt(loadMoreButton.getAttribute('data-visible-count'));
-        const articlesToLoad = 3;  // Number of articles to reveal on each click
+        const articlesToLoad = 3;
         const hiddenArticles = document.querySelectorAll('.hidden-article');
 
         for (let i = 0; i < articlesToLoad && i < hiddenArticles.length; i++) {
@@ -60,7 +62,7 @@
         loadMoreButton.setAttribute('data-visible-count', visibleCount);
 
         if (hiddenArticles.length <= articlesToLoad) {
-            loadMoreButton.style.display = 'none';  // Hide the button when all articles are visible
+            loadMoreButton.style.display = 'none'; 
         }
     });
 </script>
