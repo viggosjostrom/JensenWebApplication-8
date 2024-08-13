@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subscription</title>
     <link rel="stylesheet" href="~/css/subscriptionStyle.css">
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            const nameInput = document.getElementById('name');
+            const emailInput = document.getElementById('email');
+            const messageInput = document.getElementById('message');
+            const title = document.querySelector('h1');
+
+            form.addEventListener('submit', function(event) {
+                if (!nameInput.value || !emailInput.value || !messageInput.value) {
+                    event.preventDefault();
+                    alert('Please fill in all the required fields.');
+                } else {
+                    alert('Thank you for subscribing, ' + nameInput.value + '!');
+                }
+            });
+
+            nameInput.addEventListener('input', function() {
+                if (nameInput.value) {
+                    title.textContent = 'Welcome, ' + nameInput.value + '!';
+                } else {
+                    title.textContent = 'Super Deal!';
+                }
+            });
+        });
+    </script>
 </head>
 <body>
     <h1><strong>Super Deal!</strong></h1>
@@ -40,3 +66,4 @@
     </div>
 </body>
 </html>
+
