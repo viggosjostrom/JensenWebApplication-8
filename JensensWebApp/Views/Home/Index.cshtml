@@ -19,7 +19,7 @@
 }
 
 <div class="body-container">
-    <div class="row mt-4" id="articles-container">
+    <div class="row mt-4">
         @for (int i = 0; i < Model.Count; i++)
         {
             var article = Model[i];
@@ -40,7 +40,7 @@
     @if (Model.Count > initialLoadCount)
     {
         <div class="load-more-container">
-            <button id="load-more-button" class="btn btn-primary load-more mt-4" data-visible-count="6">
+            <button id="load-more-button" data-visible-count="6">
                 Load More
             </button>
         </div>

@@ -185,12 +185,8 @@ body.dark-mode .card {
 }
 
 #load-more-button:active {
-  background-color: #585757; 
+  background-color: #b2b0b0; 
   transform: translateY(2px);
 }
 
-#load-more-button[disabled] {
-  background-color: #d3d5d6; 
-  cursor: not-allowed;      
-}
 
