@@ -40,7 +40,7 @@
     @if (Model.Count > initialLoadCount)
     {
         <div class="load-more-container">
-            <button id="load-more-button" data-visible-count="6">
+            <button id="load-more-button">
                 Load More
             </button>
         </div>
@@ -50,17 +50,13 @@
 <script>
     document.getElementById('load-more-button').addEventListener('click', function () {
         const loadMoreButton = this;
-        let visibleCount = parseInt(loadMoreButton.getAttribute('data-visible-count'));
         const articlesToLoad = 3;
         const hiddenArticles = document.querySelectorAll('.hidden-article');
 
         for (let i = 0; i < articlesToLoad && i < hiddenArticles.length; i++) {
             hiddenArticles[i].classList.remove('hidden-article');
         }
-
-        visibleCount += articlesToLoad;
-        loadMoreButton.setAttribute('data-visible-count', visibleCount);
-
+        
         if (hiddenArticles.length <= articlesToLoad) {
             loadMoreButton.style.display = 'none'; 
         }

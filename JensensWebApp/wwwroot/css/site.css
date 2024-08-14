@@ -152,24 +152,12 @@ body.dark-mode .card {
 }
 
 #load-more-button:hover {
-  background-color: #80807f; 
+  background-color: #5a5a5a; 
 }
 
 #load-more-button:active {
-  background-color: #585757; 
+  background-color: #a4a3a3; 
   transform: translateY(2px);
-}
-
-#load-more-button[disabled] {
-  background-color: #d3d5d6; 
-  cursor: not-allowed;      
-}
-
-.footer {
-  background-color: #1a1a1a; 
-  color: #f2f2f2; 
-  text-align: center;
-  padding: 20px 0;
 }
 
 @media (max-width: 768px) {
